@@ -1,6 +1,7 @@
+
 \begin{table}[htbp]
 \centering
-\caption{Discrete Average Marginal Effects of Welfare Regime for Conventional Participation}
+\caption{Discrete Average Marginal Effects of Welfare Regimes for Conventional Participation}
 \label{tab:ame_welfare_regime}
 \begin{tabular}{llrrrr}
 \toprule
@@ -9,22 +10,22 @@ Welfare regime & Category & $\hat{dy/dx}$ & Std. Error & $z$ & $p$-value \\
 \multicolumn{6}{l}{\textit{Reference category: Northern Welfare Regime (base outcome)}} \\
 \midrule
 \multirow{7}{*}{Continental Welfare Regime}
- & 1 & $-0.062$ & 0.015 & $-4.03$ & $<0.001$ \\
- & 2 & $-0.079$ & 0.018 & $-4.40$ & $<0.001$ \\
- & 3 & $-0.098$ & 0.022 & $-4.51$ & $<0.001$ \\
- & 4 & $-0.121$ & 0.028 & $-4.39$ & $<0.001$ \\
- & 5 & $-0.146$ & 0.035 & $-4.16$ & $<0.001$ \\
- & 6 & $-0.172$ & 0.044 & $-3.93$ & $<0.001$ \\
- & 7 & $-0.199$ & 0.053 & $-3.73$ & $<0.001$ \\
+ & $-3$ & $-0.062$ & 0.015 & $-4.03$ & $<0.001$ \\
+ & $-2$ & $-0.079$ & 0.018 & $-4.40$ & $<0.001$ \\
+ & $-1$ & $-0.098$ & 0.022 & $-4.51$ & $<0.001$ \\
+ & $0$ & $-0.121$ & 0.028 & $-4.39$ & $<0.001$ \\
+ & $+1$ & $-0.146$ & 0.035 & $-4.16$ & $<0.001$ \\
+ & $+2$ & $-0.172$ & 0.044 & $-3.93$ & $<0.001$ \\
+ & $+3$ & $-0.199$ & 0.053 & $-3.73$ & $<0.001$ \\
 \midrule
 \multirow{7}{*}{Liberal Welfare Regime}
- & 1 & $-0.049$ & 0.021 & $-2.38$ & 0.017 \\
- & 2 & $-0.082$ & 0.022 & $-3.73$ & $<0.001$ \\
- & 3 & $-0.126$ & 0.023 & $-5.54$ & $<0.001$ \\
- & 4 & $-0.182$ & 0.027 & $-6.80$ & $<0.001$ \\
- & 5 & $-0.248$ & 0.037 & $-6.71$ & $<0.001$ \\
- & 6 & $-0.318$ & 0.051 & $-6.22$ & $<0.001$ \\
- & 7 & $-0.388$ & 0.066 & $-5.91$ & $<0.001$ \\
+ & $-3$ & $-0.049$ & 0.021 & $-2.38$ & 0.017 \\
+ & $-2$ & $-0.082$ & 0.022 & $-3.73$ & $<0.001$ \\
+ & $-1$ & $-0.126$ & 0.023 & $-5.54$ & $<0.001$ \\
+ & $0$ & $-0.182$ & 0.027 & $-6.80$ & $<0.001$ \\
+ & $+1$ & $-0.248$ & 0.037 & $-6.71$ & $<0.001$ \\
+ & $+2$ & $-0.318$ & 0.051 & $-6.22$ & $<0.001$ \\
+ & $+3$ & $-0.388$ & 0.066 & $-5.91$ & $<0.001$ \\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
@@ -78,3 +79,4 @@ Dy/dx for factor levels represents the discrete change from the base level.
 Number of observations: 63{,}249.
 \end{flushleft}
 \end{table}
+
