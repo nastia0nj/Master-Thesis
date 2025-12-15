@@ -5,19 +5,16 @@
 
 * Descriptive Results in R
 
-* CONVENTIONAL PARTICIPATION
-
 * Full-Model Reference to ensure same sample size 
 logit vote c.lmv_re i.labcon2 i.class5 i.cat_skill c.rlgdgr i.gender i.ethnie2 c.age  ///
-    c.agea c.nat_unemp c.gdp i.cntry_num i.essround [pweight=newweight2], vce(cluster cntry_num)
+    c.agea c.nat_unemp c.gdp i.essround [pweight=newweight2], vce(cluster cntry_num)
 
-logit vote c.lmv_re##i.welfare_regime i.cat_skill c.rlgdgr i.gender i.ethnie2 c.nat_unemp c.gdp c.agea c.age i.cntry_num i.essround if e(sample) [pweight=newweight2], vce(cluster cntry_num) 
+logit vote c.lmv_re##i.welfare_regime i.cat_skill c.rlgdgr i.gender i.ethnie2 c.nat_unemp c.gdp c.agea c.age i.essround if e(sample) [pweight=newweight2], vce(cluster cntry_num) 
 
-margins, at(lmv_re =(-3 0 3)) dydx(welfare_regime) 
+margins, at(lmv_re =(-3 (1) 3)) dydx(welfare_regime) 
 	
-marginsplot, ///
-	by(welfare_regime) 
-    title("Contrasts of Marginal Effect for Conventional Participation between Welfare States", size(medium) margin(b=2)) ///
+marginsplot,
+title("Contrasts of Marginal Effect for Unconventional Participation between Welfare States", size(medium) margin(b=2)) ///
     ytitle("Difference Average Marginal Effect to Vote", size(3)) ///
     xtitle("Employment Protection Legislation", size(3) margin(b=2)) ///
 	ysize(1) xsize(1.5)  ///
@@ -25,20 +22,23 @@ marginsplot, ///
     ylabel(, angle(horizontal)) ///
     graphregion(color(white)) ///
     plotregion(color(white)) ///
-	plot1opts(msymbol(circle) mcolor(eltblue%70) msize(medsmall)) ///
+	plot1opts(msymbol(O) mcolor(eltblue%70)) ///
 	 ci1opts(color(eltblue) lcolor(eltblue)) ///
-	 plot2opts(msymbol(circle) mcolor(navy%70) msize(medsmall)) ///
+	 plot2opts(msymbol(O) mcolor(navy%70)) ///
 	 ci2opts(color(eltblue) lcolor(navy)) ///
+	  plot2opts(lcolor(navy) lwidth(medthick) ///
+    legend(order(1 "Continental Welfare Regime" ///
+                 2 "Liberal Welfare Regime") ///
+           pos(6) ring(1) row(2) size(*0.7)) ///
 	name(con_stat_1, replace)
 
 	
 * UNCONVENTIONAL PARTICIPATION
 
 * Full-Model Reference to ensure same sample size 
-reg politics_index i.labcon2 c.lmv_re i.cat_skill i.class5  c.rlgdgr i.gender i.ethnie2 c.age c.agea c.nat_unemp c.gdp i.cntry_num i.essround [pweight=newweight2], vce(cluster cntry_num)
+reg politics_index i.labcon2 c.lmv_re i.cat_skill i.class5  c.rlgdgr i.gender i.ethnie2 c.age c.agea c.nat_unemp c.gdp i.essround [pweight=newweight2], vce(cluster cntry_num)
 
-
-reg politics_index c.lmv_re##i.welfare_regime i.cat_skill c.rlgdgr i.gender i.ethnie2 c.nat_unemp c.gdp c.age c.agea i.essround i.cntry_num if e(sample)   [pweight=newweight2], vce(cluster cntry_num) 
+reg politics_index c.lmv_re##i.welfare_regime i.cat_skill c.rlgdgr i.gender i.ethnie2 c.nat_unemp c.gdp c.age c.agea i.essround if e(sample)   [pweight=newweight2], vce(cluster cntry_num) 
 
 margins, at(lmv_re =(-3 (1) 3)) dydx(welfare_regime)
 	
@@ -56,14 +56,13 @@ title("Contrasts of Marginal Effect for Unconventional Participation between Wel
 	 plot2opts(msymbol(O) mcolor(navy%70)) ///
 	 ci2opts(color(eltblue) lcolor(navy)) ///
 	  plot2opts(lcolor(navy) lwidth(medthick) ///
-    legend(order(1 "Bismarckian Welfare Regime" ///
-                 2 "Southern Welfare Regime") ///
+    legend(order(1 "Continental Welfare Regime" ///
+                 2 "Liberal Welfare Regime") ///
            pos(6) ring(1) row(2) size(*0.7)) ///
 	name(con_stat_2, replace)
 
 
 combine graph	con_stat_1 con_stat_2, size(10) title("Moderation of Welfare State Regime") subtitle("Discrete Effect Across Risk-Based Dualization (Ref. Northern Welfare Regime)")
-	
 	
 	
 	
