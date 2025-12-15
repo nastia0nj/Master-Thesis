@@ -1,0 +1,79 @@
+\begin{table}[htbp]
+\centering
+\caption{Discrete Average Marginal Effects of Welfare Regime for Conventional Participation}
+\label{tab:ame_welfare_regime}
+\begin{tabular}{llrrrr}
+\toprule
+Welfare regime & Category & $\hat{dy/dx}$ & Std. Error & $z$ & $p$-value \\
+\midrule
+\multicolumn{6}{l}{\textit{Reference category: Northern Welfare Regime (base outcome)}} \\
+\midrule
+\multirow{7}{*}{Continental Welfare Regime}
+ & 1 & $-0.062$ & 0.015 & $-4.03$ & $<0.001$ \\
+ & 2 & $-0.079$ & 0.018 & $-4.40$ & $<0.001$ \\
+ & 3 & $-0.098$ & 0.022 & $-4.51$ & $<0.001$ \\
+ & 4 & $-0.121$ & 0.028 & $-4.39$ & $<0.001$ \\
+ & 5 & $-0.146$ & 0.035 & $-4.16$ & $<0.001$ \\
+ & 6 & $-0.172$ & 0.044 & $-3.93$ & $<0.001$ \\
+ & 7 & $-0.199$ & 0.053 & $-3.73$ & $<0.001$ \\
+\midrule
+\multirow{7}{*}{Liberal Welfare Regime}
+ & 1 & $-0.049$ & 0.021 & $-2.38$ & 0.017 \\
+ & 2 & $-0.082$ & 0.022 & $-3.73$ & $<0.001$ \\
+ & 3 & $-0.126$ & 0.023 & $-5.54$ & $<0.001$ \\
+ & 4 & $-0.182$ & 0.027 & $-6.80$ & $<0.001$ \\
+ & 5 & $-0.248$ & 0.037 & $-6.71$ & $<0.001$ \\
+ & 6 & $-0.318$ & 0.051 & $-6.22$ & $<0.001$ \\
+ & 7 & $-0.388$ & 0.066 & $-5.91$ & $<0.001$ \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize
+\textit{Notes:} Entries report discrete average marginal effects ($dy/dx$) based on logistic model predictions,
+estimated using the delta method. Robust standard errors are reported.
+LMR denotes labor market vulnerability and ranges from $-3$ (low risk) to $+3$ (high risk).
+Northern Welfare Regime serves as the reference category.
+Dy/dx for factor levels represents the discrete change from the base level.
+\end{flushleft}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Average Marginal Effects of Welfare Regimes across Labor Market Risk for Unconventional Participation}
+\label{tab:ame_welfare_lmv}
+\begin{tabular}{llrrrr}
+\toprule
+Welfare regime & LMV level & $\hat{dy/dx}$ & Std. Error & $t$ & $p$-value \\
+\midrule
+\multicolumn{6}{l}{\textit{Reference category: Northern Welfare Regime (base outcome)}} \\
+\midrule
+\multirow{7}{*}{Regime 2}
+ & $-3$ & 0.050 & 0.168 & 0.30 & 0.774 \\
+ & $-2$ & $-0.028$ & 0.157 & $-0.18$ & 0.862 \\
+ & $-1$ & $-0.106$ & 0.148 & $-0.72$ & 0.494 \\
+ & $0$  & $-0.184$ & 0.143 & $-1.29$ & 0.232 \\
+ & $+1$ & $-0.262$ & 0.140 & $-1.87$ & 0.098 \\
+ & $+2$ & $-0.341$ & 0.141 & $-2.41$ & 0.043 \\
+ & $+3$ & $-0.419$ & 0.146 & $-2.87$ & 0.021 \\
+\midrule
+\multirow{7}{*}{Regime 3}
+ & $-3$ & $-0.090$ & 0.157 & $-0.58$ & 0.581 \\
+ & $-2$ & $-0.213$ & 0.144 & $-1.48$ & 0.178 \\
+ & $-1$ & $-0.336$ & 0.136 & $-2.47$ & 0.039 \\
+ & $0$  & $-0.458$ & 0.133 & $-3.44$ & 0.009 \\
+ & $+1$ & $-0.581$ & 0.137 & $-4.25$ & 0.003 \\
+ & $+2$ & $-0.703$ & 0.146 & $-4.83$ & 0.001 \\
+ & $+3$ & $-0.826$ & 0.159 & $-5.18$ & 0.001 \\
+\bottomrule
+\end{tabular}
+
+\begin{flushleft}
+\footnotesize
+\textit{Notes:} Entries report discrete average marginal effects ($dy/dx$) based on linear model predictions,
+estimated using the delta method. Robust standard errors are reported.
+LMR denotes labor market vulnerability and ranges from $-3$ (low risk) to $+3$ (high risk).
+Northern Welfare Regime serves as the reference category.
+Dy/dx for factor levels represents the discrete change from the base level.
+\textbf{Number of observations:} 69{,}626.
+\end{flushleft}
+\end{table}
