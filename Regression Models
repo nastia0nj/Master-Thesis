@@ -1,0 +1,146 @@
+
+\begin{table}[H]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Logistic Regression of Electoral Participation}
+
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{0.95}
+
+\begin{tabular}{l c}
+\toprule
+ & (1) Logit Model \\
+\midrule
+
+Labor Market Risk (LMR)
+    & -0.250\sym{***} (0.062) \\
+
+\textit{Welfare Regime} (ref.: Social-democratic) \\
+Continental
+    & -1.046\sym{***} (0.316) \\
+Liberal
+    & -1.416\sym{***} (0.319) \\
+
+LMR $\times$ Continental
+    & -0.039 (0.028) \\
+LMR $\times$ Liberal
+    & -0.209\sym{***} (0.072) \\
+
+\textit{Education} (ref.: Low) \\
+Intermediate
+    & 0.438\sym{***} (0.081) \\
+High
+    & 1.080\sym{***} (0.123) \\
+
+Religiosity (1–10)
+    & 0.033\sym{***} (0.012) \\
+
+\textit{Gender} (ref.: Male) \\
+Female
+    & 0.286\sym{**} (0.114) \\
+
+\textit{Ethnicity} (ref.: Majority) \\
+Minority
+    & -0.707\sym{***} (0.104) \\
+
+National Unemployment Rate
+    & -0.139\sym{***} (0.026) \\
+GDP
+    & 0.005 (0.038) \\
+
+Age
+    & -2.656\sym{***} (0.871) \\
+Age Squared
+    & 2.687\sym{***} (0.876) \\
+
+Constant
+    & 1.719\sym{***} (0.444) \\
+
+\midrule
+Observations & 66,275 \\
+Pseudo $R^2$ & 0.123 \\
+Country FE & no \\
+Year FE & yes \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.4em}
+\footnotesize
+Note: Logistic regression coefficients reported. Robust standard errors clustered by country in parentheses.  
+ESS 2012--2018 (Rounds 6--9), weighted.  
+Significance levels: \sym{*} $p<0.10$, \sym{**} $p<0.05$, \sym{***} $p<0.01$.
+\end{table}
+
+
+
+\begin{table}[H]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Linear Regression of Political Participation Index}
+
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{0.95}
+
+\begin{tabular}{l c}
+\toprule
+ & (1) OLS Model \\
+\midrule
+
+Labor Market Risk (LMR)
+    & -0.035 (0.033) \\
+
+\textit{Welfare Regime} (ref.: Social-democratic) \\
+Continental
+    & -0.167 (0.145) \\
+Liberal
+    & -0.448\sym{***} (0.135) \\
+
+LMR $\times$ Continental
+    & -0.064\sym{**} (0.021) \\
+LMR $\times$ Liberal
+    & -0.107\sym{***} (0.029) \\
+
+\textit{Education} (ref.: Low) \\
+Intermediate
+    & 0.245\sym{***} (0.022) \\
+High
+    & 0.611\sym{***} (0.034) \\
+
+Religiosity (1–10)
+    & 0.008 (0.009) \\
+
+\textit{Gender} (ref.: Male) \\
+Female
+    & 0.121\sym{*} (0.052) \\
+
+\textit{Ethnicity} (ref.: Majority) \\
+Minority
+    & -0.085\sym{*} (0.045) \\
+
+National Unemployment Rate
+    & -0.019 (0.013) \\
+GDP
+    & -0.001 (0.011) \\
+
+Age
+    & -0.347 (0.216) \\
+Age Squared
+    & 0.345 (0.216) \\
+
+Constant
+    & 0.985\sym{***} (0.227) \\
+
+\midrule
+Observations & 46,275 \\
+$R^2$ & 0.087 \\
+Country FE & no \\
+Year FE & yes \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.4em}
+\footnotesize
+Note: OLS coefficients reported. Robust standard errors clustered by country in parentheses.  
+ESS 2012--2018 (Rounds 6--9), weighted.  
+Significance levels: \sym{*} $p<0.10$, \sym{**} $p<0.05$, \sym{***} $p<0.01$.
+\end{table}
